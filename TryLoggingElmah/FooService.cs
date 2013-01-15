@@ -1,6 +1,5 @@
 using System;
 using System.Reflection;
-using ServiceStack.ServiceInterface;
 using ServiceStack.Logging;
 using ServiceStack.ServiceHost;
 using ServiceStack.Text;
