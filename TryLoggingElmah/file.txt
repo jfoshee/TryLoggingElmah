@@ -1,9 +1,0 @@
-2013-01-15 15:47:34.9635|DEBUG|IndexMetadataHandler|'IndexMetadataHandler' was completed in 39.644ms
-2013-01-15 15:48:22.4865|DEBUG|IndexMetadataHandler|'IndexMetadataHandler' was completed in 0.807ms
-2013-01-15 15:48:24.9141|DEBUG|XmlMetadataHandler|'XmlMetadataHandler' was completed in 77.115ms
-2013-01-15 15:48:49.5292|DEBUG|IndexMetadataHandler|'IndexMetadataHandler' was completed in 43.443ms
-2013-01-15 15:49:11.1119|INFO|FooService|Received request: {
-	Value1: 999,
-	Value2: -998798
-}
-2013-01-15 15:49:11.1256|ERROR|EndpointHandlerBase|Error occured while Processing Request: Negative numbers not supported
