@@ -53,6 +53,12 @@
     <Reference Include="ServiceStack.Text">
       <HintPath>..\packages\ServiceStack.Text.3.9.32\lib\net35\ServiceStack.Text.dll</HintPath>
     </Reference>
+    <Reference Include="Elmah">
+      <HintPath>..\packages\elmah.corelibrary.1.2.2\lib\Elmah.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack.Logging.Elmah">
+      <HintPath>..\packages\ServiceStack.Logging.Elmah.1.0.5.0\lib\net35\ServiceStack.Logging.Elmah.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
@@ -73,6 +79,7 @@
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
     <Compile Include="AppHost.cs" />
+    <Compile Include="FooService.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
