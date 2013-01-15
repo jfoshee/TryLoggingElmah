@@ -14,7 +14,6 @@ namespace TryLoggingElmah
         {
             var baseLogFactory = new ServiceStack.Logging.NLogger.NLogFactory();
             LogManager.LogFactory = new ServiceStack.Logging.Elmah.ElmahLogFactory(baseLogFactory);
-            container.Register<ILog>(LogManager.GetLogger(typeof(AppHost)));
         }
     }
 }

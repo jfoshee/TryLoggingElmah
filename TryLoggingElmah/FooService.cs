@@ -19,8 +19,7 @@ namespace TryLoggingElmah
 
     public class FooService : IService<FooRequest>
     {
-        static readonly ILog Log = LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType);
-//        public ILog Log { get; set; }
+        static ILog Log { get { return LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType); } }
 
         public object Execute(FooRequest request)
         {
