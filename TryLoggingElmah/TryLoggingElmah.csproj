@@ -16,10 +16,11 @@
     <DebugType>full</DebugType>
     <Optimize>False</Optimize>
     <OutputPath>bin</OutputPath>
-    <DefineConstants>DEBUG;</DefineConstants>
+    <DefineConstants>DEBUG;VERBOSE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <ConsolePause>False</ConsolePause>
+    <additionalargs>-v</additionalargs>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>none</DebugType>
@@ -34,26 +35,32 @@
     <Reference Include="System.Web" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Web.Services" />
-    <Reference Include="ServiceStack">
-      <HintPath>..\packages\ServiceStack.3.9.33\lib\net35\ServiceStack.dll</HintPath>
-    </Reference>
     <Reference Include="ServiceStack.ServiceInterface">
-      <HintPath>..\packages\ServiceStack.3.9.33\lib\net35\ServiceStack.ServiceInterface.dll</HintPath>
+      <HintPath>..\packages\ServiceStack.3.9.32\lib\net35\ServiceStack.ServiceInterface.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack">
+      <HintPath>..\packages\ServiceStack.3.9.32\lib\net35\ServiceStack.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack.Logging.Log4Net">
+      <HintPath>..\packages\ServiceStack.Logging.Log4Net.1.0.5.0\lib\net35\ServiceStack.Logging.Log4Net.dll</HintPath>
     </Reference>
     <Reference Include="ServiceStack.Common">
-      <HintPath>..\packages\ServiceStack.Common.3.9.33\lib\net35\ServiceStack.Common.dll</HintPath>
+      <HintPath>..\packages\ServiceStack.Common.3.9.32\lib\net35\ServiceStack.Common.dll</HintPath>
     </Reference>
     <Reference Include="ServiceStack.Interfaces">
-      <HintPath>..\packages\ServiceStack.Common.3.9.33\lib\net35\ServiceStack.Interfaces.dll</HintPath>
+      <HintPath>..\packages\ServiceStack.Common.3.9.32\lib\net35\ServiceStack.Interfaces.dll</HintPath>
     </Reference>
     <Reference Include="ServiceStack.Text">
-      <HintPath>..\packages\ServiceStack.Text.3.9.33\lib\net35\ServiceStack.Text.dll</HintPath>
+      <HintPath>..\packages\ServiceStack.Text.3.9.32\lib\net35\ServiceStack.Text.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
     <Content Include="web.config" />
     <Content Include="Default.aspx" />
+    <Content Include="log4net.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Global.asax.cs">
