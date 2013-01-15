@@ -1,8 +1,9 @@
 using System;
+using System.Reflection;
 using ServiceStack.ServiceInterface;
 using ServiceStack.Logging;
-using System.Reflection;
 using ServiceStack.ServiceHost;
+using ServiceStack.Text;
 
 namespace TryLoggingElmah
 {
@@ -17,17 +18,16 @@ namespace TryLoggingElmah
         public int Value2 { get; set; }
     }
 
-    public class FooService : Service
+    public class FooService : IService<FooRequest>
     {
         static readonly ILog Log = LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType);
+//        public ILog Log { get; set; }
 
-        public FooService()
+        public object Execute(FooRequest request)
         {
-            Log.Info("Constructed");
-        }
-
-        public FooResponse Get(FooRequest request)
-        {
+            Log.Info("Received request: " + request.Dump());
+            if (request.Value1 < 0 || request.Value2 < 0)
+                throw new InvalidOperationException("Negative numbers not supported");
             return new FooResponse
             {
                 Sum = request.Value1 + request.Value2
@@ -35,4 +35,3 @@ namespace TryLoggingElmah
         }
     }
 }
-
